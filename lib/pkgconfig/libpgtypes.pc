@@ -1,0 +1,9 @@
+Name: libpgtypes
+Description: PostgreSQL libpgtypes library
+Url: http://www.postgresql.org/
+Version: 9.6.10
+Requires: 
+Requires.private: 
+Cflags: -I/home/francois/lisk-build/src/postgresql-9.6.10/pgsql/include
+Libs: -L/home/francois/lisk-build/src/postgresql-9.6.10/pgsql/lib -lpgtypes
+Libs.private: -L/home/francois/lisk-build/src/postgresql-9.6.10/../readline-master/out/lib -lm
