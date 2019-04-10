@@ -70,4 +70,8 @@ createdb xxxx
 
 export DATABASE_URL="postgres://ubuntu:password@localhost/horizon?sslmode=disable"
 ```
+3. postgresql的常用操作
+```
+https://www.cnblogs.com/kaituorensheng/p/4667160.html
+```
 
