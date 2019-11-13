@@ -25,7 +25,7 @@ source ~/.profile
 
 3. 初始化数据库实例
 ```
-pg_ctl initdb -D /data/psqldb
+initdb -D /data/psqldb
 ```
 
 4. 修改新建数据库实例中的postgresql.conf中的unix_socket_directories
@@ -192,3 +192,15 @@ pg_dump -U stellar -s -f /tmp/core.sql core
 ```
 psql -h localhost -d core -U ubuntu -f postgresql/core.sql
 ```
+
+# FAQ
+
+### 执行initdb -D /data/psqldb时报错: 
+
+initdb: invalid locale settings; check LANG and LC_* environment variables
+```
+initdb -D /data/psqld --no-locale --encoding=UTF8
+
+https://stackoverflow.com/questions/50746147/postgresqls-initdb-fails-with-invalid-locale-settings-check-lang-and-lc-e
+```
+
